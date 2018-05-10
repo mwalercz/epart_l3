@@ -29,13 +29,12 @@ tstl += 1;
 
 %
 % YOUR CODE GOES HERE - testing of the perceptron function
-%pzeros = tvec(tlab==1, 1:5)
-%nones = tvec(tlab==2, 1:5)
-%sp = perceptron(pzeros, nones)
-%[-ones(10,1) -nones] * sp' < 0
+pzeros = tvec(tlab==1, 1:5);
+nones = tvec(tlab==2, 1:5);
+sp = perceptron(pzeros, nones);
+%[-ones(10,1) -nones] * sp' < 0;
 
 
-     
 % training of the whole ensemble
 [ovo, ovoerr] = trainOVOensamble(tvec, tlab, @perceptron);
 

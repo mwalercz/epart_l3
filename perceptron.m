@@ -34,9 +34,8 @@ function [sepplane fp fn] = perceptron(pclass, nclass)
   %%% YOUR CODE GOES HERE %%%
   %% You should:
   %% 1. Compute the numbers of false positives and false negatives
-  sepplane
-  misCls = tset * sepplane' < 0
-  fp = sum(misCls(1:nPos))
-  fn = sum(misCls(nPos+1:end))
+  misCls = tset * sepplane' < 0;
+  fp = sum(misCls(1:nPos));
+  fn = sum(misCls(nPos+1:end));
   pclass
   
